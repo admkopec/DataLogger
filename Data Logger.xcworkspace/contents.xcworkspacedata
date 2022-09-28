@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Data Logger/Data Logger.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Data Logger Emulator/Data Logger Emulator.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/adamkopec/Documents/DataLogger/BluetoothProtocol">
+   </FileRef>
+</Workspace>

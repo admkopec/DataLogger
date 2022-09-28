@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B03FE9928D0B3590063A832 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03FE9828D0B3590063A832 /* TableViewController.swift */; };
+		3B03FE9B28D0B71D0063A832 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03FE9A28D0B71D0063A832 /* SidebarViewController.swift */; };
+		3B03FE9E28D0C4000063A832 /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B03FE9D28D0C4000063A832 /* CarView.swift */; };
+		3B9EAFDA28E4441700711357 /* FixedWidthInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9EAFD928E4441700711357 /* FixedWidthInteger.swift */; };
+		3B9EAFDC28E44E4400711357 /* DataLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9EAFDB28E44E4400711357 /* DataLogger.swift */; };
+		3B9EAFDE28E44EB700711357 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9EAFDD28E44EB700711357 /* Car.swift */; };
+		3B9EAFE228E4836B00711357 /* BluetoothProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9EAFE128E4836B00711357 /* BluetoothProtocol */; };
+		3BB185B528D359DB00BD5509 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB185B428D359DB00BD5509 /* AccountViewController.swift */; };
+		3BB1C8F328D45DE20052F173 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1C8F228D45DE20052F173 /* MapViewController.swift */; };
+		3BEB2AFB28D0887200426CB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2AFA28D0887200426CB2 /* AppDelegate.swift */; };
+		3BEB2AFD28D0887200426CB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2AFC28D0887200426CB2 /* SceneDelegate.swift */; };
+		3BEB2AFF28D0887200426CB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2AFE28D0887200426CB2 /* ViewController.swift */; };
+		3BEB2B0228D0887200426CB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB2B0028D0887200426CB2 /* Main.storyboard */; };
+		3BEB2B0428D0887400426CB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB2B0328D0887400426CB2 /* Assets.xcassets */; };
+		3BEB2B0728D0887400426CB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB2B0528D0887400426CB2 /* LaunchScreen.storyboard */; };
+		3BEB2B1028D09CF500426CB2 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2B0F28D09CF500426CB2 /* BluetoothController.swift */; };
+		3BEB2B1328D0A6AA00426CB2 /* CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2B1228D0A6AA00426CB2 /* CloudKit.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B03FE9828D0B3590063A832 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		3B03FE9A28D0B71D0063A832 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		3B03FE9D28D0C4000063A832 /* CarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
+		3B9EAFD928E4441700711357 /* FixedWidthInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedWidthInteger.swift; sourceTree = "<group>"; };
+		3B9EAFDB28E44E4400711357 /* DataLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogger.swift; sourceTree = "<group>"; };
+		3B9EAFDD28E44EB700711357 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		3B9EAFE728E483DA00711357 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3BB185B428D359DB00BD5509 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		3BB1C8F228D45DE20052F173 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3BEB2AF728D0887200426CB2 /* Data Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Data Logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEB2AFA28D0887200426CB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3BEB2AFC28D0887200426CB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3BEB2AFE28D0887200426CB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3BEB2B0128D0887200426CB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BEB2B0328D0887400426CB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BEB2B0628D0887400426CB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BEB2B0828D0887400426CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BEB2B0F28D09CF500426CB2 /* BluetoothController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
+		3BEB2B1228D0A6AA00426CB2 /* CloudKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKit.swift; sourceTree = "<group>"; };
+		3BEB2B1428D0A8A500426CB2 /* Data Logger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Data Logger.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BEB2AF428D0887200426CB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B9EAFE228E4836B00711357 /* BluetoothProtocol in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B03FE9728D0B34A0063A832 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3B03FE9828D0B3590063A832 /* TableViewController.swift */,
+				3B9EAFDB28E44E4400711357 /* DataLogger.swift */,
+				3B9EAFDD28E44EB700711357 /* Car.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3B03FE9C28D0C3EA0063A832 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B03FE9D28D0C4000063A832 /* CarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3B9EAFE028E4836B00711357 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BEB2AEE28D0887200426CB2 = {
+			isa = PBXGroup;
+			children = (
+				3B9EAFE728E483DA00711357 /* README.md */,
+				3BEB2AF928D0887200426CB2 /* Data Logger */,
+				3BEB2AF828D0887200426CB2 /* Products */,
+				3B9EAFE028E4836B00711357 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3BEB2AF828D0887200426CB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB2AF728D0887200426CB2 /* Data Logger.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BEB2AF928D0887200426CB2 /* Data Logger */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB2B1428D0A8A500426CB2 /* Data Logger.entitlements */,
+				3BEB2AFA28D0887200426CB2 /* AppDelegate.swift */,
+				3BEB2AFC28D0887200426CB2 /* SceneDelegate.swift */,
+				3B03FE9728D0B34A0063A832 /* Common */,
+				3BEB2B1128D0A69D00426CB2 /* CloudKit */,
+				3BEB2B0E28D09C8900426CB2 /* Bluetooth */,
+				3BEB2AFE28D0887200426CB2 /* ViewController.swift */,
+				3BB1C8F228D45DE20052F173 /* MapViewController.swift */,
+				3B03FE9A28D0B71D0063A832 /* SidebarViewController.swift */,
+				3BB185B428D359DB00BD5509 /* AccountViewController.swift */,
+				3B03FE9C28D0C3EA0063A832 /* Views */,
+				3BEB2B0028D0887200426CB2 /* Main.storyboard */,
+				3BEB2B0328D0887400426CB2 /* Assets.xcassets */,
+				3BEB2B0528D0887400426CB2 /* LaunchScreen.storyboard */,
+				3BEB2B0828D0887400426CB2 /* Info.plist */,
+			);
+			path = "Data Logger";
+			sourceTree = "<group>";
+		};
+		3BEB2B0E28D09C8900426CB2 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB2B0F28D09CF500426CB2 /* BluetoothController.swift */,
+				3B9EAFD928E4441700711357 /* FixedWidthInteger.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		3BEB2B1128D0A69D00426CB2 /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB2B1228D0A6AA00426CB2 /* CloudKit.swift */,
+			);
+			path = CloudKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BEB2AF628D0887200426CB2 /* Data Logger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BEB2B0B28D0887400426CB2 /* Build configuration list for PBXNativeTarget "Data Logger" */;
+			buildPhases = (
+				3BEB2AF328D0887200426CB2 /* Sources */,
+				3BEB2AF428D0887200426CB2 /* Frameworks */,
+				3BEB2AF528D0887200426CB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Data Logger";
+			packageProductDependencies = (
+				3B9EAFE128E4836B00711357 /* BluetoothProtocol */,
+			);
+			productName = "Data Logger";
+			productReference = 3BEB2AF728D0887200426CB2 /* Data Logger.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BEB2AEF28D0887200426CB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					3BEB2AF628D0887200426CB2 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = 3BEB2AF228D0887200426CB2 /* Build configuration list for PBXProject "Data Logger" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BEB2AEE28D0887200426CB2;
+			productRefGroup = 3BEB2AF828D0887200426CB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BEB2AF628D0887200426CB2 /* Data Logger */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BEB2AF528D0887200426CB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEB2B0728D0887400426CB2 /* LaunchScreen.storyboard in Resources */,
+				3BEB2B0428D0887400426CB2 /* Assets.xcassets in Resources */,
+				3BEB2B0228D0887200426CB2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BEB2AF328D0887200426CB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB1C8F328D45DE20052F173 /* MapViewController.swift in Sources */,
+				3B9EAFDC28E44E4400711357 /* DataLogger.swift in Sources */,
+				3B03FE9E28D0C4000063A832 /* CarView.swift in Sources */,
+				3BEB2AFF28D0887200426CB2 /* ViewController.swift in Sources */,
+				3B9EAFDE28E44EB700711357 /* Car.swift in Sources */,
+				3B03FE9928D0B3590063A832 /* TableViewController.swift in Sources */,
+				3BEB2AFB28D0887200426CB2 /* AppDelegate.swift in Sources */,
+				3BEB2B1028D09CF500426CB2 /* BluetoothController.swift in Sources */,
+				3BB185B528D359DB00BD5509 /* AccountViewController.swift in Sources */,
+				3BEB2AFD28D0887200426CB2 /* SceneDelegate.swift in Sources */,
+				3BEB2B1328D0A6AA00426CB2 /* CloudKit.swift in Sources */,
+				3B03FE9B28D0B71D0063A832 /* SidebarViewController.swift in Sources */,
+				3B9EAFDA28E4441700711357 /* FixedWidthInteger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3BEB2B0028D0887200426CB2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BEB2B0128D0887200426CB2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BEB2B0528D0887400426CB2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BEB2B0628D0887400426CB2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BEB2B0928D0887400426CB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3BEB2B0A28D0887400426CB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BEB2B0C28D0887400426CB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Data Logger/Data Logger.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C6P2EMH7KR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Data Logger/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We use bluetooth to connect to the Data Logger hardware";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.cybercom.iz.Data-Logger";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BEB2B0D28D0887400426CB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Data Logger/Data Logger.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C6P2EMH7KR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Data Logger/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We use bluetooth to connect to the Data Logger hardware";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.cybercom.iz.Data-Logger";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BEB2AF228D0887200426CB2 /* Build configuration list for PBXProject "Data Logger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEB2B0928D0887400426CB2 /* Debug */,
+				3BEB2B0A28D0887400426CB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BEB2B0B28D0887400426CB2 /* Build configuration list for PBXNativeTarget "Data Logger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEB2B0C28D0887400426CB2 /* Debug */,
+				3BEB2B0D28D0887400426CB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B9EAFE128E4836B00711357 /* BluetoothProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BluetoothProtocol;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3BEB2AEF28D0887200426CB2 /* Project object */;
+}

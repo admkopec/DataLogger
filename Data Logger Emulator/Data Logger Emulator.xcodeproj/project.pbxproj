@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B6A936128C6265700EDBB27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A936028C6265700EDBB27 /* AppDelegate.swift */; };
+		3B6A936328C6265700EDBB27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A936228C6265700EDBB27 /* ViewController.swift */; };
+		3B6A936528C6265800EDBB27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6A936428C6265800EDBB27 /* Assets.xcassets */; };
+		3B6A936828C6265800EDBB27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6A936628C6265800EDBB27 /* Main.storyboard */; };
+		3B9EAFE528E4837600711357 /* BluetoothProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9EAFE428E4837600711357 /* BluetoothProtocol */; };
+		3BF60E7728E1A23E00B3D780 /* FixedWidthInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF60E7628E1A23E00B3D780 /* FixedWidthInteger.swift */; };
+		3BF60E7D28E1DFBE00B3D780 /* BluetoothPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF60E7C28E1DFBE00B3D780 /* BluetoothPeripheral.swift */; };
+		3BF60E7F28E32A3300B3D780 /* DeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF60E7E28E32A3300B3D780 /* DeviceInfoViewController.swift */; };
+		3BF60E8228E32A4200B3D780 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF60E8028E32A4200B3D780 /* LocationViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B6A935D28C6265700EDBB27 /* Data Logger Emulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Data Logger Emulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B6A936028C6265700EDBB27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B6A936228C6265700EDBB27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B6A936428C6265800EDBB27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B6A936728C6265800EDBB27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B6A936928C6265800EDBB27 /* DataLoggerEmulator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DataLoggerEmulator.entitlements; sourceTree = "<group>"; };
+		3B9EAFE628E483BF00711357 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3BF60E7628E1A23E00B3D780 /* FixedWidthInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedWidthInteger.swift; sourceTree = "<group>"; };
+		3BF60E7C28E1DFBE00B3D780 /* BluetoothPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheral.swift; sourceTree = "<group>"; };
+		3BF60E7E28E32A3300B3D780 /* DeviceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoViewController.swift; sourceTree = "<group>"; };
+		3BF60E8028E32A4200B3D780 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B6A935A28C6265700EDBB27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B9EAFE528E4837600711357 /* BluetoothProtocol in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B6A935428C6265700EDBB27 = {
+			isa = PBXGroup;
+			children = (
+				3B9EAFE628E483BF00711357 /* README.md */,
+				3B6A935F28C6265700EDBB27 /* Data Logger Emulator */,
+				3B6A935E28C6265700EDBB27 /* Products */,
+				3B9EAFE328E4837600711357 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3B6A935E28C6265700EDBB27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B6A935D28C6265700EDBB27 /* Data Logger Emulator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B6A935F28C6265700EDBB27 /* Data Logger Emulator */ = {
+			isa = PBXGroup;
+			children = (
+				3BF60E7928E1DBE000B3D780 /* Bluetooth */,
+				3BF60E7828E1DBD100B3D780 /* Extensions */,
+				3B6A936028C6265700EDBB27 /* AppDelegate.swift */,
+				3B6A936228C6265700EDBB27 /* ViewController.swift */,
+				3BF60E7E28E32A3300B3D780 /* DeviceInfoViewController.swift */,
+				3BF60E8028E32A4200B3D780 /* LocationViewController.swift */,
+				3B6A936428C6265800EDBB27 /* Assets.xcassets */,
+				3B6A936628C6265800EDBB27 /* Main.storyboard */,
+				3B6A936928C6265800EDBB27 /* DataLoggerEmulator.entitlements */,
+			);
+			path = "Data Logger Emulator";
+			sourceTree = "<group>";
+		};
+		3B9EAFE328E4837600711357 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BF60E7828E1DBD100B3D780 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3BF60E7628E1A23E00B3D780 /* FixedWidthInteger.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3BF60E7928E1DBE000B3D780 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				3BF60E7C28E1DFBE00B3D780 /* BluetoothPeripheral.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B6A935C28C6265700EDBB27 /* Data Logger Emulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B6A936C28C6265800EDBB27 /* Build configuration list for PBXNativeTarget "Data Logger Emulator" */;
+			buildPhases = (
+				3B6A935928C6265700EDBB27 /* Sources */,
+				3B6A935A28C6265700EDBB27 /* Frameworks */,
+				3B6A935B28C6265700EDBB27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Data Logger Emulator";
+			packageProductDependencies = (
+				3B9EAFE428E4837600711357 /* BluetoothProtocol */,
+			);
+			productName = BluetoothPeripherial;
+			productReference = 3B6A935D28C6265700EDBB27 /* Data Logger Emulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B6A935528C6265700EDBB27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					3B6A935C28C6265700EDBB27 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = 3B6A935828C6265700EDBB27 /* Build configuration list for PBXProject "Data Logger Emulator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B6A935428C6265700EDBB27;
+			productRefGroup = 3B6A935E28C6265700EDBB27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B6A935C28C6265700EDBB27 /* Data Logger Emulator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B6A935B28C6265700EDBB27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6A936528C6265800EDBB27 /* Assets.xcassets in Resources */,
+				3B6A936828C6265800EDBB27 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B6A935928C6265700EDBB27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BF60E8228E32A4200B3D780 /* LocationViewController.swift in Sources */,
+				3BF60E7D28E1DFBE00B3D780 /* BluetoothPeripheral.swift in Sources */,
+				3B6A936328C6265700EDBB27 /* ViewController.swift in Sources */,
+				3BF60E7F28E32A3300B3D780 /* DeviceInfoViewController.swift in Sources */,
+				3BF60E7728E1A23E00B3D780 /* FixedWidthInteger.swift in Sources */,
+				3B6A936128C6265700EDBB27 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3B6A936628C6265800EDBB27 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6A936728C6265800EDBB27 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B6A936A28C6265800EDBB27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3B6A936B28C6265800EDBB27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3B6A936D28C6265800EDBB27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Data Logger Emulator/DataLoggerEmulator.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C6P2EMH7KR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "The app will act as a Data Logger simulator";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.cybercom.iz.DataLoggerEmulator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3B6A936E28C6265800EDBB27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Data Logger Emulator/DataLoggerEmulator.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C6P2EMH7KR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "The app will act as a Data Logger simulator";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.cybercom.iz.DataLoggerEmulator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B6A935828C6265700EDBB27 /* Build configuration list for PBXProject "Data Logger Emulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B6A936A28C6265800EDBB27 /* Debug */,
+				3B6A936B28C6265800EDBB27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B6A936C28C6265800EDBB27 /* Build configuration list for PBXNativeTarget "Data Logger Emulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B6A936D28C6265800EDBB27 /* Debug */,
+				3B6A936E28C6265800EDBB27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B9EAFE428E4837600711357 /* BluetoothProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BluetoothProtocol;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3B6A935528C6265700EDBB27 /* Project object */;
+}
