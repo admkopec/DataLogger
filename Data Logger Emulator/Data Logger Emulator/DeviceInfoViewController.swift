@@ -6,9 +6,11 @@
 //
 
 import Cocoa
+import Combine
 
 class DeviceInfoViewController: NSViewController {
     var dataLogger: DataLogger!
+    private var subscriber: AnyCancellable?
     
     @IBOutlet weak var firmwareTextField: NSTextField!
     @IBOutlet weak var serialNumberTextField: NSTextField!
@@ -24,7 +26,37 @@ class DeviceInfoViewController: NSViewController {
     
     override func viewWillAppear() {
         super.viewWillAppear()
+        subscriber = dataLogger.objectWillChange.receive(on: DispatchQueue.main).sink { _ in
+            self.updateViewBasedOn(dataLogger: self.dataLogger)
+        }
         // Set the view items based on BluetoothPeripheral configuration
+        updateViewBasedOn(dataLogger: dataLogger)
+    }
+    
+    override func viewDidDisappear() {
+        super.viewDidDisappear()
+        // Unsubscribe
+        subscriber?.cancel()
+        // Set the preferences for BluetoothPeripheral
+        setChanges()
+    }
+    
+    /// The NSSwitch has changed its state
+    @IBAction func randomiseChanged(_ sender: NSSwitch) {
+        if sender.state == .on {
+            // Use random values
+            isChargingButton.isEnabled = false
+            batteryLevelTextField.isEnabled = false
+            batteryLevelLabel.textColor = .placeholderTextColor
+        } else {
+            // Use user provided values
+            isChargingButton.isEnabled = true
+            batteryLevelTextField.isEnabled = true
+            batteryLevelLabel.textColor = .labelColor
+        }
+    }
+    
+    func updateViewBasedOn(dataLogger: DataLogger) {
         if let firmware = dataLogger.firmwareVersion {
             firmwareTextField.stringValue = firmware
         }
@@ -43,27 +75,6 @@ class DeviceInfoViewController: NSViewController {
             batteryLevelLabel.textColor = .placeholderTextColor
             batteryLevelTextField.isEnabled = false
             isChargingButton.isEnabled = false
-        }
-    }
-    
-    override func viewDidDisappear() {
-        super.viewDidDisappear()
-        // Set the preferences for BluetoothPeripheral
-        setChanges()
-    }
-    
-    /// The NSSwitch has changed its state
-    @IBAction func randomiseChanged(_ sender: NSSwitch) {
-        if sender.state == .on {
-            // Use random values
-            isChargingButton.isEnabled = false
-            batteryLevelTextField.isEnabled = false
-            batteryLevelLabel.textColor = .placeholderTextColor
-        } else {
-            // Use user provided values
-            isChargingButton.isEnabled = true
-            batteryLevelTextField.isEnabled = true
-            batteryLevelLabel.textColor = .labelColor
         }
     }
     

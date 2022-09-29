@@ -277,13 +277,17 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
                 loggerTransferCharacteristic = characteristic
             case TransferService.protocolVersionCharacteristicUUID,
                 TransferService.firmwareVersionCharacteristicUUID,
-                TransferService.serialNumberCharacteristicUUID,
-                TransferService.batteryLevelCharacteristicUUID,
-                TransferService.batteryStatusCharacteristicUUID,
-                TransferService.locationAndSpeedCharacteristicUUID:
+                TransferService.serialNumberCharacteristicUUID:
                 print("Attempting to read value")
                 // Read the value
                 peripheral.readValue(for: characteristic)
+            case TransferService.batteryLevelCharacteristicUUID,
+                TransferService.batteryStatusCharacteristicUUID,
+                TransferService.locationAndSpeedCharacteristicUUID:
+                print("Attempting to read value and subscribe for updates")
+                // Read the value
+                peripheral.readValue(for: characteristic)
+                peripheral.setNotifyValue(true, for: characteristic)
             default:
                 continue
             }
@@ -406,7 +410,7 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
     func handleLocationAndSpeed(data: Data) -> Void {
         let flags = data[0]
         print("Discovered Car's location and speed: Flags: \(flags)")
-        if (flags & 1) != 0 {
+        if (flags & 1) == 1 {
             let littleEndian = [data[1], data[2]].withUnsafeBytes {
                 $0.load(as: UInt16.self)
             }
@@ -416,14 +420,14 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
         }
         let littleEndianLat: UInt32
         let littleEndianLon: UInt32
-        if (flags & 3) != 0 {
+        if (flags & 3) == 3 {
             littleEndianLat = [data[3], data[4], data[5], data[6]].withUnsafeBytes {
                 $0.load(as: UInt32.self)
             }
             littleEndianLon = [data[7], data[8], data[9], data[10]].withUnsafeBytes {
                 $0.load(as: UInt32.self)
             }
-        } else if (flags & 2) != 0 {
+        } else if (flags & 2) == 2 {
             littleEndianLat = [data[1], data[2], data[3], data[4]].withUnsafeBytes {
                 $0.load(as: UInt32.self)
             }
