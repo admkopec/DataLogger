@@ -12,6 +12,7 @@
 		3B6A936528C6265800EDBB27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6A936428C6265800EDBB27 /* Assets.xcassets */; };
 		3B6A936828C6265800EDBB27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6A936628C6265800EDBB27 /* Main.storyboard */; };
 		3B9EAFE528E4837600711357 /* BluetoothProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9EAFE428E4837600711357 /* BluetoothProtocol */; };
+		3BE2B8B028E593FA0036BAA7 /* DataLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2B8AF28E593FA0036BAA7 /* DataLogger.swift */; };
 		3BF60E7728E1A23E00B3D780 /* FixedWidthInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF60E7628E1A23E00B3D780 /* FixedWidthInteger.swift */; };
 		3BF60E7D28E1DFBE00B3D780 /* BluetoothPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF60E7C28E1DFBE00B3D780 /* BluetoothPeripheral.swift */; };
 		3BF60E7F28E32A3300B3D780 /* DeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF60E7E28E32A3300B3D780 /* DeviceInfoViewController.swift */; };
@@ -26,6 +27,7 @@
 		3B6A936728C6265800EDBB27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B6A936928C6265800EDBB27 /* DataLoggerEmulator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DataLoggerEmulator.entitlements; sourceTree = "<group>"; };
 		3B9EAFE628E483BF00711357 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3BE2B8AF28E593FA0036BAA7 /* DataLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogger.swift; sourceTree = "<group>"; };
 		3BF60E7628E1A23E00B3D780 /* FixedWidthInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedWidthInteger.swift; sourceTree = "<group>"; };
 		3BF60E7C28E1DFBE00B3D780 /* BluetoothPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheral.swift; sourceTree = "<group>"; };
 		3BF60E7E28E32A3300B3D780 /* DeviceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		3BF60E7928E1DBE000B3D780 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				3BE2B8AF28E593FA0036BAA7 /* DataLogger.swift */,
 				3BF60E7C28E1DFBE00B3D780 /* BluetoothPeripheral.swift */,
 			);
 			path = Bluetooth;
@@ -178,6 +181,7 @@
 				3BF60E7D28E1DFBE00B3D780 /* BluetoothPeripheral.swift in Sources */,
 				3B6A936328C6265700EDBB27 /* ViewController.swift in Sources */,
 				3BF60E7F28E32A3300B3D780 /* DeviceInfoViewController.swift in Sources */,
+				3BE2B8B028E593FA0036BAA7 /* DataLogger.swift in Sources */,
 				3BF60E7728E1A23E00B3D780 /* FixedWidthInteger.swift in Sources */,
 				3B6A936128C6265700EDBB27 /* AppDelegate.swift in Sources */,
 			);

@@ -8,7 +8,7 @@
 import Cocoa
 
 class LocationViewController: NSViewController {
-    var bluetoothPeripheral: BluetoothPeripheral!
+    var dataLogger: DataLogger!
     
     @IBOutlet weak var randomSwitch: NSSwitch!
     @IBOutlet weak var speedTextField: NSTextField!
@@ -23,7 +23,7 @@ class LocationViewController: NSViewController {
     override func viewWillAppear() {
         super.viewWillAppear()
         // Set the view items based on BluetoothPeripheral configuration
-        if let speed =  bluetoothPeripheral.speed, let location = bluetoothPeripheral.location {
+        if let speed =  dataLogger.speed, let location = dataLogger.location {
             randomSwitch.state = .off
             speedTextField.isEnabled = true
             latitudeTextField.isEnabled = true
@@ -62,12 +62,12 @@ class LocationViewController: NSViewController {
     func setChanges() {
         if speedTextField.isEnabled {
             // Set Speed in m/s
-            bluetoothPeripheral.speed = speedTextField.integerValue * 1000
+            dataLogger.speed = speedTextField.integerValue * 1000
             // Set location in degrees
-            bluetoothPeripheral.location = (latitudeTextField.doubleValue, longitudeTextField.doubleValue)
+            dataLogger.location = (latitudeTextField.doubleValue, longitudeTextField.doubleValue)
         } else {
-            bluetoothPeripheral.speed = nil
-            bluetoothPeripheral.location = nil
+            dataLogger.speed = nil
+            dataLogger.location = nil
         }
     }
 }

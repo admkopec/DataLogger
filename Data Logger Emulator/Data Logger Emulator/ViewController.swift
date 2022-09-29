@@ -39,8 +39,8 @@ class ViewController: NSViewController {
     
     /// Pass the BluetoothPeripheral object to the presented View Controller
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        (segue.destinationController as? LocationViewController)?.bluetoothPeripheral = bluetoothPeripheral
-        (segue.destinationController as? DeviceInfoViewController)?.bluetoothPeripheral = bluetoothPeripheral
+        (segue.destinationController as? LocationViewController)?.dataLogger = bluetoothPeripheral.dataLogger
+        (segue.destinationController as? DeviceInfoViewController)?.dataLogger = bluetoothPeripheral.dataLogger
     }
 }
 

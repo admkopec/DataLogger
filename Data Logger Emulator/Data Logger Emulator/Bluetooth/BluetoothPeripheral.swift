@@ -11,7 +11,7 @@ import CoreBluetooth
 import BluetoothProtocol
 
 //
-//  TODO: Improve random location and speed
+//  TODO: Improve random LocationAndSpeed and Battery values (Make them more consistent)
 //      * Add support for notification functionality of LocationAndSpeed and Battery characteristics
 //
 
@@ -32,7 +32,7 @@ class BluetoothPeripheral: NSObject, CBPeripheralManagerDelegate {
     
     private var connectedCentral: CBCentral?
     
-    var timer: AnyCancellable?
+    private var timers = [CBUUID: AnyCancellable]()
     
     /// A Boolean value that indicates whether the peripheral is advertising data.
     var isAdvertising: Bool {
@@ -40,16 +40,7 @@ class BluetoothPeripheral: NSObject, CBPeripheralManagerDelegate {
     }
     
     // Settings
-    
-    // Device
-    var firmwareVersion: String?
-    var serialNumber: String?
-    // Battery
-    var batteryLevel: Int?
-    var isChargingBattery: Bool?
-    // Location and Speed
-    var speed: Int?
-    var location: (latitude: Double, longitude: Double)?
+    let dataLogger = DataLogger()
     
     override init() {
         super.init()
@@ -188,18 +179,34 @@ class BluetoothPeripheral: NSObject, CBPeripheralManagerDelegate {
         
         // Save central
         connectedCentral = central
+        let timer: AnyCancellable
         
-        if characteristic.uuid == TransferService.loggerCharacteristicUUID {
+        switch characteristic.uuid {
+        case TransferService.loggerCharacteristicUUID:
             // Start sending some data
             timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect().sink { _ in
                 self.sendData()
             }
-        } else if characteristic.uuid == TransferService.locationAndSpeedCharacteristicUUID {
+        case TransferService.locationAndSpeedCharacteristicUUID:
             // Start sending location and speed updates
             timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect().sink { _ in
                 self.sendLocationAndSpeed()
             }
+        case TransferService.batteryLevelCharacteristicUUID:
+            // Start sending battery level updates
+            timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect().sink { _ in
+                self.sendBatteryLevel()
+            }
+        case TransferService.batteryStatusCharacteristicUUID:
+            // Start sending battery status changes
+            timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect().sink { _ in
+                self.sendBatteryStatus()
+            }
+        default:
+            print("Central is trying to subscribe to unsupported characteristic")
+            return peripheralManager(peripheral, central: central, didUnsubscribeFrom: characteristic)
         }
+        timers[characteristic.uuid] = timer
     }
     
     /*
@@ -207,8 +214,10 @@ class BluetoothPeripheral: NSObject, CBPeripheralManagerDelegate {
      */
     func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didUnsubscribeFrom characteristic: CBCharacteristic) {
         print("Central unsubscribed from characteristic")
-        timer?.cancel()
-        connectedCentral = nil
+        timers.removeValue(forKey: characteristic.uuid)?.cancel()
+        if timers.isEmpty {
+            connectedCentral = nil
+        }
     }
     
     func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveWrite requests: [CBATTRequest]) {
@@ -226,29 +235,29 @@ class BluetoothPeripheral: NSObject, CBPeripheralManagerDelegate {
             request.value = Data("0.1".utf8)
         case TransferService.firmwareVersionCharacteristicUUID:
             // Set the response data (Firmware Version)
-            request.value = Data((firmwareVersion ?? "1.0 Mac").utf8)
+            request.value = Data((dataLogger.firmwareVersion ?? "1.0 Mac").utf8)
         case TransferService.serialNumberCharacteristicUUID:
             // Set the response data (Serial Number)
-            request.value = Data((serialNumber ?? "00DL1234").utf8)
+            request.value = Data((dataLogger.serialNumber ?? "00DL1234").utf8)
         case TransferService.batteryLevelCharacteristicUUID:
             // Set the response data (Battery percantage level)
-            if let batteryLevel = batteryLevel {
+            if let batteryLevel = dataLogger.batteryLevel {
                 request.value = Data([UInt8(batteryLevel)])
             } else {
                 request.value = Data([UInt8.random(in: 0...100)])
             }
         case TransferService.batteryStatusCharacteristicUUID:
             // Set the response data (Battery discharging status)
-            if isChargingBattery == true {
+            if dataLogger.isChargingBattery == true {
                 request.value = Data([1])
-            } else if isChargingBattery == false {
+            } else if dataLogger.isChargingBattery == false {
                 request.value = Data([0])
             } else {
                 request.value = Data([UInt8.random(in: 0...1)])
             }
         case TransferService.locationAndSpeedCharacteristicUUID:
             // Set the response data
-            if let speed, let location {
+            if let speed = dataLogger.speed, let location = dataLogger.location {
                 request.value = Data([3] +  // Flags (Speed and Location is present)
                                      UInt16(speed*100).littleEndian.bytes + // Speed in 10^-2m/s
                                      UInt32(location.latitude * 10_000_000).littleEndian.bytes + // Latitude in 10^-7deg
@@ -300,6 +309,33 @@ class BluetoothPeripheral: NSObject, CBPeripheralManagerDelegate {
             data = Data([2] + UInt32(52_2303300).littleEndian.bytes + UInt32(20_9804600).littleEndian.bytes)
         default:
             fatalError()
+        }
+        guard peripheralManager.updateValue(data, for: transferCharacteristic, onSubscribedCentrals: nil) else {
+            print("Sending failed!")
+            return
+        }
+    }
+    
+    private func sendBatteryLevel() {
+        guard let transferCharacteristic = batteryLevelCharacteristic else {
+            return
+        }
+        guard peripheralManager.updateValue(Data([UInt8.random(in: 0...100)]), for: transferCharacteristic, onSubscribedCentrals: nil) else {
+            print("Sending failed!")
+            return
+        }
+    }
+    
+    private func sendBatteryStatus() {
+        guard let transferCharacteristic = batteryChargingCharacteristic else {
+            return
+        }
+        let data: Data
+        switch Int.random(in: 0...3) {
+        case 0:
+            data = Data([1])
+        default:
+            data = Data([0])
         }
         guard peripheralManager.updateValue(data, for: transferCharacteristic, onSubscribedCentrals: nil) else {
             print("Sending failed!")

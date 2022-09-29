@@ -8,7 +8,7 @@
 import Cocoa
 
 class DeviceInfoViewController: NSViewController {
-    var bluetoothPeripheral: BluetoothPeripheral!
+    var dataLogger: DataLogger!
     
     @IBOutlet weak var firmwareTextField: NSTextField!
     @IBOutlet weak var serialNumberTextField: NSTextField!
@@ -25,13 +25,13 @@ class DeviceInfoViewController: NSViewController {
     override func viewWillAppear() {
         super.viewWillAppear()
         // Set the view items based on BluetoothPeripheral configuration
-        if let firmware = bluetoothPeripheral.firmwareVersion {
+        if let firmware = dataLogger.firmwareVersion {
             firmwareTextField.stringValue = firmware
         }
-        if let serialNumber = bluetoothPeripheral.serialNumber {
+        if let serialNumber = dataLogger.serialNumber {
             serialNumberTextField.stringValue = serialNumber
         }
-        if let batteryLevel = bluetoothPeripheral.batteryLevel, let isCharging = bluetoothPeripheral.isChargingBattery {
+        if let batteryLevel = dataLogger.batteryLevel, let isCharging = dataLogger.isChargingBattery {
             randomSwitch.state = .off
             batteryLevelLabel.textColor = .labelColor
             batteryLevelTextField.isEnabled = true
@@ -70,22 +70,22 @@ class DeviceInfoViewController: NSViewController {
     /// Push the changes to BluetoothPeripheral object
     func setChanges() {
         if firmwareTextField.stringValue.isEmpty {
-            bluetoothPeripheral.firmwareVersion = nil
+            dataLogger.firmwareVersion = nil
         } else {
-            bluetoothPeripheral.firmwareVersion = firmwareTextField.stringValue
+            dataLogger.firmwareVersion = firmwareTextField.stringValue
         }
         if serialNumberTextField.stringValue.isEmpty {
-            bluetoothPeripheral.serialNumber = nil
+            dataLogger.serialNumber = nil
         } else {
-            bluetoothPeripheral.serialNumber = serialNumberTextField.stringValue
+            dataLogger.serialNumber = serialNumberTextField.stringValue
         }
         
         if batteryLevelTextField.isEnabled {
-            bluetoothPeripheral.batteryLevel = batteryLevelTextField.integerValue
-            bluetoothPeripheral.isChargingBattery = isChargingButton.state == .on
+            dataLogger.batteryLevel = batteryLevelTextField.integerValue
+            dataLogger.isChargingBattery = isChargingButton.state == .on
         } else {
-            bluetoothPeripheral.batteryLevel = nil
-            bluetoothPeripheral.isChargingBattery = nil
+            dataLogger.batteryLevel = nil
+            dataLogger.isChargingBattery = nil
         }
     }
 }
