@@ -213,6 +213,7 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
                                          TransferService.deviceInfoServiceUUID,
                                          TransferService.batteryServiceUUID,
                                          TransferService.locationServiceUUID])
+            dataLogger.isConnected = false
         }
     }
     
@@ -270,11 +271,11 @@ class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDeleg
         guard let serviceCharacteristics = service.characteristics else { return }
         for characteristic in serviceCharacteristics {
             switch characteristic.uuid {
-            case TransferService.loggerCharacteristicUUID:
-                print("Attaching to logger notifier")
-                // If it is, subscribe to it
-                peripheral.setNotifyValue(true, for: characteristic)
-                loggerTransferCharacteristic = characteristic
+//            case TransferService.loggerCharacteristicUUID:
+//                print("Attaching to logger notifier")
+//                // If it is, subscribe to it
+//                peripheral.setNotifyValue(true, for: characteristic)
+//                loggerTransferCharacteristic = characteristic
             case TransferService.protocolVersionCharacteristicUUID,
                 TransferService.firmwareVersionCharacteristicUUID,
                 TransferService.serialNumberCharacteristicUUID:
