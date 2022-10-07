@@ -21,6 +21,10 @@ class AccountViewController: TableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        // Setup Driver Classification cell
+        if let driverCell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? DriverTableViewCell {
+            driverCell.configure(basedOn: .good(avgSpeed: 80))
+        }
         for cell in tableView.visibleCells {
             style(cell: cell)
         }

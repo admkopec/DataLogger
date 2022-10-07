@@ -36,9 +36,9 @@
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5LE-18-v6y">
-                                <rect key="frame" x="25" y="103" width="50" height="91.666666666666686"/>
+                                <rect key="frame" x="25" y="103" width="50" height="92"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="asN-nq-ch5">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="91.666666666666686"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="92"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yW-0p-ci7">
@@ -252,7 +252,7 @@
                         <sections>
                             <tableViewSection id="rxK-p3-Gdx">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="90" id="0ld-62-mOD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="90" id="0ld-62-mOD" customClass="DriverTableViewCell" customModule="Data_Logger" customModuleProvider="target">
                                         <rect key="frame" x="20" y="18" width="353" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0ld-62-mOD" id="37H-4i-smK">
@@ -303,6 +303,11 @@
                                                 <constraint firstItem="qWU-Dk-6tC" firstAttribute="top" secondItem="37H-4i-smK" secondAttribute="top" constant="20" symbolic="YES" id="vjs-kc-BzL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailLabel" destination="1Ye-Ah-VJs" id="lak-IX-rGs"/>
+                                            <outlet property="iconView" destination="qWU-Dk-6tC" id="lMJ-An-rYk"/>
+                                            <outlet property="titleLabel" destination="mDd-XT-BYA" id="Ggz-4Z-7s3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

@@ -14,8 +14,10 @@
 		3B9EAFDC28E44E4400711357 /* DataLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9EAFDB28E44E4400711357 /* DataLogger.swift */; };
 		3B9EAFDE28E44EB700711357 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9EAFDD28E44EB700711357 /* Car.swift */; };
 		3B9EAFE228E4836B00711357 /* BluetoothProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9EAFE128E4836B00711357 /* BluetoothProtocol */; };
+		3BABAA2D28EC42E700A9810E /* DriverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BABAA2C28EC42E700A9810E /* DriverTableViewCell.swift */; };
 		3BB185B528D359DB00BD5509 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB185B428D359DB00BD5509 /* AccountViewController.swift */; };
 		3BB1C8F328D45DE20052F173 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1C8F228D45DE20052F173 /* MapViewController.swift */; };
+		3BB2D64328EC510E00396028 /* DriverClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2D64228EC510E00396028 /* DriverClass.swift */; };
 		3BEB2AFB28D0887200426CB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2AFA28D0887200426CB2 /* AppDelegate.swift */; };
 		3BEB2AFD28D0887200426CB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2AFC28D0887200426CB2 /* SceneDelegate.swift */; };
 		3BEB2AFF28D0887200426CB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2AFE28D0887200426CB2 /* ViewController.swift */; };
@@ -34,8 +36,10 @@
 		3B9EAFDB28E44E4400711357 /* DataLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogger.swift; sourceTree = "<group>"; };
 		3B9EAFDD28E44EB700711357 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		3B9EAFE728E483DA00711357 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3BABAA2C28EC42E700A9810E /* DriverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableViewCell.swift; sourceTree = "<group>"; };
 		3BB185B428D359DB00BD5509 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		3BB1C8F228D45DE20052F173 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3BB2D64228EC510E00396028 /* DriverClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverClass.swift; sourceTree = "<group>"; };
 		3BEB2AF728D0887200426CB2 /* Data Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Data Logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEB2AFA28D0887200426CB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEB2AFC28D0887200426CB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 				3B03FE9828D0B3590063A832 /* TableViewController.swift */,
 				3B9EAFDB28E44E4400711357 /* DataLogger.swift */,
 				3B9EAFDD28E44EB700711357 /* Car.swift */,
+				3BB2D64228EC510E00396028 /* DriverClass.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -84,6 +89,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BABAA2B28EC42CE00A9810E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3BABAA2C28EC42E700A9810E /* DriverTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		3BEB2AEE28D0887200426CB2 = {
@@ -118,6 +131,7 @@
 				3B03FE9A28D0B71D0063A832 /* SidebarViewController.swift */,
 				3BB185B428D359DB00BD5509 /* AccountViewController.swift */,
 				3B03FE9C28D0C3EA0063A832 /* Views */,
+				3BABAA2B28EC42CE00A9810E /* Cells */,
 				3BEB2B0028D0887200426CB2 /* Main.storyboard */,
 				3BEB2B0328D0887400426CB2 /* Assets.xcassets */,
 				3BEB2B0528D0887400426CB2 /* LaunchScreen.storyboard */,
@@ -224,10 +238,12 @@
 				3B9EAFDE28E44EB700711357 /* Car.swift in Sources */,
 				3B03FE9928D0B3590063A832 /* TableViewController.swift in Sources */,
 				3BEB2AFB28D0887200426CB2 /* AppDelegate.swift in Sources */,
+				3BABAA2D28EC42E700A9810E /* DriverTableViewCell.swift in Sources */,
 				3BEB2B1028D09CF500426CB2 /* BluetoothController.swift in Sources */,
 				3BB185B528D359DB00BD5509 /* AccountViewController.swift in Sources */,
 				3BEB2AFD28D0887200426CB2 /* SceneDelegate.swift in Sources */,
 				3BEB2B1328D0A6AA00426CB2 /* CloudKit.swift in Sources */,
+				3BB2D64328EC510E00396028 /* DriverClass.swift in Sources */,
 				3B03FE9B28D0B71D0063A832 /* SidebarViewController.swift in Sources */,
 				3B9EAFDA28E4441700711357 /* FixedWidthInteger.swift in Sources */,
 			);
