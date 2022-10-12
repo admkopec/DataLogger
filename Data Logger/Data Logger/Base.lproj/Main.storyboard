@@ -36,7 +36,7 @@
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5LE-18-v6y">
-                                <rect key="frame" x="25" y="103" width="50" height="92"/>
+                                <rect key="frame" x="25" y="103" width="50" height="91.666666666666686"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="asN-nq-ch5">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="92"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

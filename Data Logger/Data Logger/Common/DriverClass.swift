@@ -8,7 +8,8 @@
 import Foundation
 
 enum DriverClass {
-    case good(avgSpeed: Int)
-    case mediocare(avgSpeed: Int)
-    case bad(avgSpeed: Int)
+    // Avg Speed is stored in m/s
+    case good(avgSpeed: Double)
+    case mediocare(avgSpeed: Double)
+    case bad(avgSpeed: Double)
 }
