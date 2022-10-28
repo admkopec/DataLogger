@@ -18,6 +18,8 @@
 		3BB185B528D359DB00BD5509 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB185B428D359DB00BD5509 /* AccountViewController.swift */; };
 		3BB1C8F328D45DE20052F173 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1C8F228D45DE20052F173 /* MapViewController.swift */; };
 		3BB2D64328EC510E00396028 /* DriverClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2D64228EC510E00396028 /* DriverClass.swift */; };
+		3BE039832900472700B5EF29 /* DataLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE039822900472700B5EF29 /* DataLoggerTests.swift */; };
+		3BE0398A2900487C00B5EF29 /* BluetoothTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE039892900487C00B5EF29 /* BluetoothTests.swift */; };
 		3BEB2AFB28D0887200426CB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2AFA28D0887200426CB2 /* AppDelegate.swift */; };
 		3BEB2AFD28D0887200426CB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2AFC28D0887200426CB2 /* SceneDelegate.swift */; };
 		3BEB2AFF28D0887200426CB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2AFE28D0887200426CB2 /* ViewController.swift */; };
@@ -27,6 +29,16 @@
 		3BEB2B1028D09CF500426CB2 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2B0F28D09CF500426CB2 /* BluetoothController.swift */; };
 		3BEB2B1328D0A6AA00426CB2 /* CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB2B1228D0A6AA00426CB2 /* CloudKit.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BE039842900472700B5EF29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BEB2AEF28D0887200426CB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BEB2AF628D0887200426CB2;
+			remoteInfo = "Data Logger";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3B03FE9828D0B3590063A832 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +52,9 @@
 		3BB185B428D359DB00BD5509 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		3BB1C8F228D45DE20052F173 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3BB2D64228EC510E00396028 /* DriverClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverClass.swift; sourceTree = "<group>"; };
+		3BE039802900472700B5EF29 /* DataLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE039822900472700B5EF29 /* DataLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoggerTests.swift; sourceTree = "<group>"; };
+		3BE039892900487C00B5EF29 /* BluetoothTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothTests.swift; sourceTree = "<group>"; };
 		3BEB2AF728D0887200426CB2 /* Data Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Data Logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEB2AFA28D0887200426CB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEB2AFC28D0887200426CB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +69,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3BE0397D2900472700B5EF29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BEB2AF428D0887200426CB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,11 +121,21 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		3BE039812900472700B5EF29 /* DataLoggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3BE039822900472700B5EF29 /* DataLoggerTests.swift */,
+				3BE039892900487C00B5EF29 /* BluetoothTests.swift */,
+			);
+			path = DataLoggerTests;
+			sourceTree = "<group>";
+		};
 		3BEB2AEE28D0887200426CB2 = {
 			isa = PBXGroup;
 			children = (
 				3B9EAFE728E483DA00711357 /* README.md */,
 				3BEB2AF928D0887200426CB2 /* Data Logger */,
+				3BE039812900472700B5EF29 /* DataLoggerTests */,
 				3BEB2AF828D0887200426CB2 /* Products */,
 				3B9EAFE028E4836B00711357 /* Frameworks */,
 			);
@@ -113,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				3BEB2AF728D0887200426CB2 /* Data Logger.app */,
+				3BE039802900472700B5EF29 /* DataLoggerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +193,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3BE0397F2900472700B5EF29 /* DataLoggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BE039882900472700B5EF29 /* Build configuration list for PBXNativeTarget "DataLoggerTests" */;
+			buildPhases = (
+				3BE0397C2900472700B5EF29 /* Sources */,
+				3BE0397D2900472700B5EF29 /* Frameworks */,
+				3BE0397E2900472700B5EF29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BE039852900472700B5EF29 /* PBXTargetDependency */,
+			);
+			name = DataLoggerTests;
+			productName = DataLoggerTests;
+			productReference = 3BE039802900472700B5EF29 /* DataLoggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3BEB2AF628D0887200426CB2 /* Data Logger */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BEB2B0B28D0887400426CB2 /* Build configuration list for PBXNativeTarget "Data Logger" */;
@@ -190,6 +241,10 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					3BE0397F2900472700B5EF29 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 3BEB2AF628D0887200426CB2;
+					};
 					3BEB2AF628D0887200426CB2 = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -209,11 +264,19 @@
 			projectRoot = "";
 			targets = (
 				3BEB2AF628D0887200426CB2 /* Data Logger */,
+				3BE0397F2900472700B5EF29 /* DataLoggerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3BE0397E2900472700B5EF29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BEB2AF528D0887200426CB2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +290,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3BE0397C2900472700B5EF29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BE0398A2900487C00B5EF29 /* BluetoothTests.swift in Sources */,
+				3BE039832900472700B5EF29 /* DataLoggerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BEB2AF328D0887200426CB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,6 +323,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3BE039852900472700B5EF29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BEB2AF628D0887200426CB2 /* Data Logger */;
+			targetProxy = 3BE039842900472700B5EF29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		3BEB2B0028D0887200426CB2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -271,6 +351,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3BE039862900472700B5EF29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C6P2EMH7KR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.cybercom.iz.DataLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Data Logger.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Data Logger";
+			};
+			name = Debug;
+		};
+		3BE039872900472700B5EF29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C6P2EMH7KR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pl.cybercom.iz.DataLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Data Logger.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Data Logger";
+			};
+			name = Release;
+		};
 		3BEB2B0928D0887400426CB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -450,6 +566,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3BE039882900472700B5EF29 /* Build configuration list for PBXNativeTarget "DataLoggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BE039862900472700B5EF29 /* Debug */,
+				3BE039872900472700B5EF29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3BEB2AF228D0887200426CB2 /* Build configuration list for PBXProject "Data Logger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

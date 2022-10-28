@@ -11,14 +11,6 @@ import CoreLocation
 import CoreBluetooth
 import BluetoothProtocol
 
-//
-//  TODO: Update the data using notification functionality.
-//        Currently the information is only updated using read requests.
-//        Quick TODO:
-//          * Try to subscribe to LocationAndSpeed characteristic.
-//          * Try to subscribe to Battery characteristic.
-//
-
 class BluetoothController: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     // MARK: CoreBluetooth
