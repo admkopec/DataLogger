@@ -62,6 +62,6 @@ class DriverTableViewCell: UITableViewCell {
         }
         
         let value = Measurement(value: speed, unit: UnitSpeed.metersPerSecond).converted(to: self.speedUnit)
-        detailLabel.text = "Your avg speed is \(Int(value.value)) \(unitString)"
+        detailLabel.text = "Your avg speed is \(Car.convert(speed: speed, to: speedUnit)) \(unitString)"
     }
 }

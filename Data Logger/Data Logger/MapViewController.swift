@@ -61,8 +61,7 @@ class MapViewController: UIViewController {
         }
         
         let car = dataLogger.car
-        let value = Measurement(value: car.speed, unit: UnitSpeed.metersPerSecond).converted(to: self.speedUnit)
-        self.speedLabel.text = "\(Int(value.value))"
+        self.speedLabel.text = "\(self.convert(speed: car.speed))"
         self.annotation.coordinate = car.location
     }
     
@@ -89,8 +88,7 @@ class MapViewController: UIViewController {
         // Here we should start checking updates of location and speed
         let car = (UIApplication.shared.delegate as! AppDelegate).dataLogger.car
         car.$speed.receive(on: DispatchQueue.main).sink { speed in
-            let value = Measurement(value: speed, unit: UnitSpeed.metersPerSecond).converted(to: self.speedUnit)
-            self.speedLabel.text = "\(Int(value.value))"
+            self.speedLabel.text = "\(self.convert(speed: speed))"
         }.store(in: &subscribers)
         car.$location.receive(on: DispatchQueue.main).sink { location in
             self.annotation.coordinate = location
@@ -102,6 +100,11 @@ class MapViewController: UIViewController {
         // Here we should cancel subscribers for view updates
         subscribers.forEach({ $0.cancel() })
         subscribers = []
+    }
+    
+    /// Function which converts speed supplied in `unit` speed units into the desired `speedUnit` as floored integer.
+    func convert(speed: Double, from unit: UnitSpeed = .metersPerSecond) -> Int {
+        return Car.convert(speed: speed, from: unit, to: speedUnit)
     }
     
     /*

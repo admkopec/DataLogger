@@ -74,12 +74,4 @@ final class BluetoothTests: XCTestCase {
         controller.handleLocationAndSpeed(data: Data([2] + UInt32(location.latitude * 10_000_000).littleEndian.bytes + UInt32(location.longitude * 10_000_000).littleEndian.bytes))
         XCTAssert(dataLogger.car.location.longitude == location.longitude && dataLogger.car.location.latitude == location.latitude)
     }
-    
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
